@@ -119,7 +119,7 @@ If everything works, now the next step is to upload it to [Render](https://dashb
 ###  How to deploy? 
 Open a [Render](https://dashboard.render.com/") account, log in and click on `New Web Service`, you will link your GitHub profile with Render and select your repository that contains the Node.js application with Docker and click on `Create Web Service`. 
 
-Now when the process is finished it will create a link to the web service. Take a look:
+Now when the process is finished it will create a link to the API. Take a look:
 https://api-render-2jop.onrender.com
 
 And that's it, it's finished!
