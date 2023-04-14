@@ -10,7 +10,7 @@ Firstly we gonna setup project with basic concepts.
 ## Inside directory
 Now we have to configure Docker to make container of this application. Make sure you have Docker installed on your PC.
 
-- Inside root directory you gonna create `Dockerfile` using `touch Dockerfile` or `New-File Dockerfile` on windows
+- Inside root directory you gonna create `Dockerfile` using `touch Dockerfile` or `New-Item Dockerfile` on windows
 - Create a `.dockerignore` too and add the following code: 
 
 ``` .dockerignore
