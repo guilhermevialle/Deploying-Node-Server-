@@ -27,28 +27,26 @@ node_modules
 Now let's create an express server inside `src/index.js` and put in an environment variable port.
 
 ``` javascript
-const  express  =  require('express')
-const  axios  =  require('axios')
+const express = require('express')
+const port = process.env.PORT || 9090
+const server = express()
+const axios = require('axios')
 
-const  port  =  process.env.PORT  ||  9090
-const  server  =  express()
+server.get('/', async (req, res) => {
+  try {
+    const { data } = await axios.get('https://jsonplaceholder.typicode.com/todos')
 
-server.get('/',  async  (req,  res)  =>  {
+    if (!data) return res.status(404).send('Data not found')
 
-try  {
-  const  {  data  }  =  await  axios.get('https://jsonplaceholder.typicode.com/todos')
+    return res.status(200).send(data)
+  } catch (error) {
 
-if (!data) return  res.status(404).send('Data not found')
-  return  res.status(200).send(data)
-
-}  catch (error) {
-  return  res.status(500).send('Server error at handling at getting data')
-
+    return res.status(500).send('Server error at handling get data')
   }
-
 })
 
-server.listen(port,  ()  =>  console.log(`http://localhost:${port}`))
+server.listen(port, () => console.log(`http://localhost:${port}`))
+
 ```
 
 ## Creating container
