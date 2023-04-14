@@ -56,21 +56,20 @@ In the configuration of`package.json` we need to create `start` script command t
 
 ```javascript
 {
-  "name":  "api-render",
-  "version":  "1.0.0",
-  "description":  "",
-  "main":  "src/index.js",
-  "scripts":  {
-   // This command will start the application server
-   ====> "start":  "node src/index.js" 
-   
-},
-  "keywords":  [],
-  "author":  "",
-  "license":  "ISC",
-  "dependencies":  {
-     "axios":  "^1.3.5",
-     "express":  "^4.18.2"
+  "name": "api-render",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+  // Add this script 
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.3.5",
+    "express": "^4.18.2"
   }
 }
 ```
