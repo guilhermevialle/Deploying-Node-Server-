@@ -110,4 +110,21 @@ Now that it worked let's upload the files on github. Open terminal and use git t
 
 
 ## Build and deploy
-It's almost over, now let's build the application using docker
+It's almost over, now let's build the application using docker. Open Docker on your PC and inside of your root directory you will send the following commands in the terminal:
+- `docker build -t <your-image-name> .`
+
+After building we will test again, but this time we will run the image created through docker
+
+-  `docker run -p 9090:9090 <your-image-name>`
+
+If everything works, now the next step is to upload it to [Render](https://dashboard.render.com/").
+
+###  How to deploy? 
+Open a [Render](https://dashboard.render.com/") account, log in and click on `New Web Service`, you will link your GitHub profile with Render and select your repository that contains the Node.js application with Docker and click on `Create Web Service`. 
+
+Now when the process is finished it will create a link to the web service. Take a look:
+https://api-render-2jop.onrender.com
+
+And that's it, it's finished!
+
+
