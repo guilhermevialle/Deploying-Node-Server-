@@ -28,9 +28,11 @@ Now let's create an express server inside `src/index.js` and put in an environme
 
 ``` javascript
 const express = require('express')
+const axios = require('axios')
+
 const port = process.env.PORT || 9090
 const server = express()
-const axios = require('axios')
+
 
 server.get('/', async (req, res) => {
   try {
