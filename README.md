@@ -1,4 +1,4 @@
-# Deploy Node.js on Render 
+# Deploy Node.js app on Render 
 In this tutorial im gonna show how to deploy your first Node.js app in Render.
 
 ## Setup project
